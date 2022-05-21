@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100");
+
+
+//------------------------------------------------
+//*--------------------mainpage_Background----------------------
+
+html {
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  max-height: 100%;
+  background-image: url("/assets/Bild1.jpg");
+}
+
+//*--------------------mainpage----------------------
+
+.container111 {
+  display: flex;
+  width: 100%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+  height: 90vh; //war 100vh//
+}
+
+.box {
+  flex: 1;
+  overflow: hidden;
+  transition: 0.5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  line-height: 0;
+}
+
+.box > img {
+  width: 150%;
+  height: calc(100% - 10vh);
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.box > span {
+  color: aliceblue;
+  font-size: 3vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+}
+
+.box:hover {
+  flex: 1 1 50%;//war  50%//
+}
+.box:hover > img {
+  width: 100%;
+  height: 100%;
+}
+

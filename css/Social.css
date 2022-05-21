@@ -1,0 +1,209 @@
+/* go on then, styles go here.. knock yourself out! */
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400);
+@-webkit-keyframes pulsate {
+  0% {
+    -webkit-transform: scale(0.6, 0.6);
+            transform: scale(0.6, 0.6);
+    opacity: 0.0;
+  }
+  50% {
+    opacity: 1.0;
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    opacity: 0.0;
+  }
+}
+@keyframes pulsate {
+  0% {
+    -webkit-transform: scale(0.6, 0.6);
+            transform: scale(0.6, 0.6);
+    opacity: 0.0;
+  }
+  50% {
+    opacity: 1.0;
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    opacity: 0.0;
+  }
+}
+
+h1, h2 {
+  color: #fff;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.profile-card {
+  height: 400px;
+  width: 650px;
+  position: relative;
+  margin: 4em auto;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.profile-card header {
+  backdrop-filter: blur(7px) saturate(74%);
+  -webkit-backdrop-filter: blur(7px) saturate(74%);
+  background-color: rgba(255, 255, 255, 0.44);
+  border-radius: 12px;
+  border: 2px solid rgba(209, 213, 219, 0.3);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#00000000',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+.profile-card header a {
+  position: relative;
+}
+
+.profile-card header a:before {
+  content: "";
+  border: 15px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  -webkit-animation: pulsate 1.6s ease-out;
+          animation: pulsate 1.6s ease-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  opacity: 0.0;
+  z-index: 99;
+}
+
+.profile-card header img {
+  position: relative;
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+  padding: 0;
+  margin: 0;
+  border: 15px solid transparent;
+  margin-top: 12px;
+  z-index: 9999;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.profile-card header a:hover img {
+  -webkit-transform: scale(1.06, 1.06);
+          transform: scale(1.06, 1.06);
+}
+
+.profile-card header a:hover:before {
+  -webkit-animation: none;
+          animation: none;
+}
+
+.profile-card header h1 {
+  color: aliceblue;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 400;
+  opacity: 0.9;
+  margin-bottom: 8px;
+}
+
+.profile-card header h2 {
+  font-size: 20px;
+  margin-top: 0;
+  opacity: 0.9;
+}
+
+.profile-card .profile-bio {
+  position: absolute;
+  bottom: 0;
+}
+
+.profile-card .profile-bio p {
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: large;
+  color: #fff;
+  margin: 24px, 80px;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.flex-center {
+  margin: 4em auto;
+  width: 40%;
+  min-height: 30vh;
+  border-radius: 20px;
+  background: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.icon-3d {
+  padding: 10px;
+  -webkit-animation: icon3d 200ms 10;
+  animation: icon3d 200ms 10;
+  color: white;
+}
+
+.icon-3d:hover {
+  -webkit-animation: icon3d 500ms infinite;
+  animation: icon3d 500ms infinite;
+}
+
+@-webkit-keyframes icon3d {
+  0% {
+    text-shadow: 5px 4px #f44336, -5px -6px #2196f3;
+  }
+  20% {
+    text-shadow: -5px -6px #f44336, 5px 4px #2196f3;
+  }
+  45% {
+    text-shadow: 5px -4px #f44336, -8px 4px #2196f3;
+  }
+  70% {
+    text-shadow: -8px -4px #f44336, -5px -4px #2196f3;
+  }
+  100% {
+    text-shadow: -5px 0 #f44336, 5px -4px #2196f3;
+  }
+}
+
+@keyframes icon3d {
+  0% {
+    text-shadow: 5px 4px #f44336, -5px -6px #2196f3;
+  }
+  20% {
+    text-shadow: -5px -6px #f44336, 5px 4px #2196f3;
+  }
+  45% {
+    text-shadow: 5px -4px #f44336, -8px 4px #2196f3;
+  }
+  70% {
+    text-shadow: -8px -4px #f44336, -5px -4px #2196f3;
+  }
+  100% {
+    text-shadow: -5px 0 #f44336, 5px -4px #2196f3;
+  }
+}
+/*# sourceMappingURL=Social.css.map */
